@@ -1,0 +1,9 @@
+streamlit
+pandas
+requests
+re
+smtplib
+pycountry
+time
+datetime
+joblib
