@@ -1,9 +1,9 @@
 streamlit
 pandas
 requests
-re
-smtplib
+import re
+import smtplib
 pycountry
-time
-datetime
+import time
+import datetime
 joblib
