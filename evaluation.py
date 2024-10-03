@@ -49,20 +49,11 @@ df = pd.DataFrame({
     "Derived_MAP":[dmap]
     })
 
-# user_data = joblib.load('scaler_trained.pkl')
-# user_data = user_data.transform(df)
+user_data = joblib.load('scaler_trained.pkl')
+user_data = user_data.transform(df)
 
-with open('scaler_trained.pkl', 'rb') as f:
-    user_data = pickle.load(f)
-    user_data = user_data.transform(df)
-    
-# doctor = joblib.load('model_trained.pkl')
-# doctorAlfred = doctor.predict(user_data)[0]
-
-with open('model_trained.pkl', 'rb') as f:
-    doctor = pickle.load(f)
-    doctorAlfred = doctor.predict(user_data)[0]
-
+doctor = joblib.load('model_trained.pkl')
+doctorAlfred = doctor.predict(user_data)[0]
 
 def btn_clicked():
     # print("Yes Y did you click me")
